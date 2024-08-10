@@ -1,0 +1,173 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&display=swap'); */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+.izq {
+    height: 100vh;
+    width: 50%;
+    background-color: rgb(31, 31, 31);
+}
+
+.der {
+    background: url(https://img.freepik.com/foto-gratis/operacion-atm-banco_1359-1209.jpg?t=st=1723243857~exp=1723247457~hmac=5ab37db5ce62eb39bec422f75045b44c244295539b5ca36033f6d7e20f640d3f&w=740);
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 100vh;
+    
+}
+
+#pantalla_div {
+    display: flex;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.container_typing{
+   display:block;
+   font-family: monospace;
+   white-space: nowrap;
+   border-right: 3px solid;
+   width: 80vh;
+   animation: animacion 2s steps(35), blink .5s infinite step-end alternate;
+   overflow: hidden;
+   text-align:justify;
+   font-size: 36px;
+   color: #68c3ff;
+}
+
+.titulo{
+    margin-top: 20%;
+    text-align: center;
+    font-size: 40px;
+    font-variant-numeric: bold;
+    
+}
+
+.subtitulo{
+    text-align: center;
+    font-size: 20px;
+    color: rgb(255, 83, 83);
+}
+
+.contenedor{
+    flex: 3;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+body .caja {
+    display: grid;
+    gap: 10px;
+    grid-auto-columns: 80px;
+    grid-auto-rows: 80px;
+    /* background: rgb(31, 32, 66); */
+    padding: 12px;
+    /* border: 2px solid rgb(255, 255, 255); */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    user-select: none;
+    box-shadow: 0px 0px 12px 6px rgba(0, 0, 0, 0.57); 
+
+}
+
+.pantalla {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    color: #111;
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}
+
+.pantalla {
+    grid-column: 1 / span 4;
+    grid-row: 1;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    font-size: 2rem;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding:5px;
+    /* overflow: hidden; */
+}
+
+.boton {
+    /* background-color: #444; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(0, 0, 0);
+    font-size: 1.3rem;
+    border-radius: 10px;
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: rgb(107, 57, 247);
+}
+
+
+  
+  #cero{
+    grid-column: span 2;
+  }
+  
+  #igual{
+  grid-column: span 4;
+  background-color: rgb(90, 30, 255);
+  overflow: hidden;
+  }
+  
+  #igual::before{
+    content: '';
+    position: relative;
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    background-color: rgb(107, 57, 247);
+    transition: width 1s, height 1s;
+  }
+  
+  #igual:hover::before{
+    width: 1000px;
+    height: 1000px;
+  }
+  #igual span{
+    position: absolute;
+    z-index: 1;
+  }
+
+img{
+    height: 80%;
+}
+@keyframes animacion {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes transparent {
+  50%{
+    border-color: transparent
+  }
+}
